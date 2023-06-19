@@ -1,0 +1,10 @@
+streamlit==1.22.0
+bs4
+pandas
+numpy
+datetime
+matplotlib
+openai
+finnhub-python==2.4.18
+pyqt5
+
