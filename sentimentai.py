@@ -209,7 +209,8 @@ if button:
     #print(x)
     print(y)
 
-    #############  
+    #############
+    st.markdown("##")
     fig, ax = plt.subplots(figsize=(19, 9)) # Create the plot
     plt.style.use('seaborn-darkgrid') # Set the style
     #ax.plot(x, y, color='steelblue', linewidth=3, linestyle='--') # Plot the data
