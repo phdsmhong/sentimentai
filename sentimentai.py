@@ -100,8 +100,9 @@ AI의 감성 이해 능력에 대한 연구목적으로 만들어졌으며, 현�
 """ % url)
 ################################
 #https://trading-data-analysis.pro/combining-web-scraping-and-prompt-engineered-large-language-models-as-a-stock-headline-monitor-and-2c375ffde576
-#openai.api_key = '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' # REPLACE WITH THIS YOUR KEY
-finnhub_api_key = 'ci630k1r01qrqj5659qgci630k1r01qrqj5659r0' # replace this with your key
+#openai.api_key = 'XXXX' # REPLACE WITH THIS YOUR KEY
+#finnhub_api_key = 'XXXX' # replace this with your key
+finnhub_api_key = st.secrets['finnhub_api_key']
 
 st.markdown("---")
 #tickers = pd.read_csv('data/nasdaq-listed.csv')
