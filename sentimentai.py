@@ -129,9 +129,9 @@ openai.api_key = openai_api_key
 ############################################
 #st.button('RUN AI MODEL')
 st.markdown("---")
-st.markdown("##")
+#st.markdown("##")
 
-if st.button('RUN AI MODEL'):
+if st.button('RUN MODEL'):
 #if len(openai.api_key):
     res = Request(f'https://finviz.com/quote.ashx?t={ticker}&p=d', headers={'User-Agent': 'Safari/602.1'})
     webpage = urlopen(res).read()
