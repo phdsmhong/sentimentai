@@ -94,13 +94,13 @@ st.markdown(""" <style> .font2 {
 #     </style> """, unsafe_allow_html=True)
 url = "https://platform.openai.com/account/api-keys"
 st.markdown("""
-투자감성 AI는 웹크롤링과 생성형 AI 기술을 결합하여 인터넷 정보에 관한 실시간 감성분석을 수행하는 AI입니다.  \
+시장감성 AI는 웹크롤링과 생성형 AI 기술을 결합하여 인터넷 정보에 관한 실시간 감성분석을 수행하는 AI입니다.  \
 AI의 감성 이해 능력에 대한 연구목적으로 만들어졌으며, 현재는 미국의 7대 첨단기업 관련 주요 뉴스에 대한 분석만 실시하고 있습니다.
 """)
 #st.markdown("""
-#투자감성 AI는 웹크롤링과 생성형 AI 기술을 결합하여 인터넷 정보에 관한 실시간 감성분석을 수행하는 AI입니다.  \
+#시장감성 AI는 웹크롤링과 생성형 AI 기술을 결합하여 인터넷 정보에 관한 실시간 감성분석을 수행하는 AI입니다.  \
 #AI의 감성 이해 능력에 대한 연구목적으로 만들어졌으며, 현재는 미국의 7대 첨단기업 관련 주요 뉴스에 대한 분석만 실시하고 있습니다.  \
-#투자감성 AI를 사용하시려면 OpenAI 유료계정과 API Key를 생성하시기 바랍니다. [API Key 생성하러 가기](%s)
+#시장감성 AI를 사용하시려면 OpenAI 유료계정과 API Key를 생성하시기 바랍니다. [API Key 생성하러 가기](%s)
 #""" % url)
 ################################
 #https://trading-data-analysis.pro/combining-web-scraping-and-prompt-engineered-large-language-models-as-a-stock-headline-monitor-and-2c375ffde576
