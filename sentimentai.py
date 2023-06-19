@@ -82,7 +82,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 #########################################################################
 # LOGO
 #https://pmbaumgartner.github.io/streamlitopedia/sizing-and-images.html
-image = Image.open('sentimentai_logo2.jpg')
+image = Image.open('marketsentiment_v1.jpg')
 st.image(image, caption='')
 ########################
 st.markdown(""" <style> .font2 {
