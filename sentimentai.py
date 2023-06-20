@@ -170,14 +170,17 @@ if button:
     latest = df[df.Date>timestamp].set_index('Date').sort_index(ascending=True)
     ###
     def get_completion_from_messages(messages, model="gpt-3.5-turbo-0613", temperature=0):
-        response = openai.ChatCompletion.create(
-            model=model,
-            messages=messages,
-            temperature=temperature, # this is the degree of randomness of the model's output
-        )
-    #     print(str(response.choices[0].message))
-        return response.choices[0].message["content"]
-
+        try: 
+            response = openai.ChatCompletion.create(
+                model=model,
+                messages=messages,
+                temperature=temperature, # this is the degree of randomness of the model's output
+            )
+        #    print(str(response.choices[0].message))
+            return response.choices[0].message["content"]
+        except openai.error.RateLimitError:
+            return "Sorry, the model is currently overloaded. Please try again later."
+        
     print(latest)
     print(latest.Headline)
     headline = latest.Headline.iloc[0]
@@ -203,6 +206,7 @@ if button:
         if len(str(response))>3:
             score = 0
         else:
+            response = response.rstrip('.')
             score = int(response)
         y[i] = score
 
