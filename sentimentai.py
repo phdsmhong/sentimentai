@@ -203,11 +203,13 @@ if button:
     {'role':'user', 'content':headlines},
                     ]
         response = get_completion_from_messages(messages, temperature=0)
+        print(response)
         if len(str(response))>3:
             score = 0
         else:
             response = response.rstrip('.')
             score = int(response)
+            print(score)
         y[i] = score
 
     #print(x)
