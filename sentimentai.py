@@ -111,7 +111,7 @@ finnhub_api_key = st.secrets['finnhub_api_key']
 st.markdown("---")
 #tickers = pd.read_csv('data/nasdaq-listed.csv')
 #indicators = tickers.sort_values("tickers").tickers.unique().tolist()
-st.markdown("검색할 종목의 ticker를 선택하세요 (애플, MS, 구글, 아마존, 테슬라, 메타, NVDIA 중 택일)")
+st.markdown("검색할 종목의 ticker를 선택하세요 (애플, MS, 구글, 아마존, 테슬라, 메타, NVDIA 중 택일).")
 ticker = st.selectbox(label="XX", label_visibility="collapsed", 
                       options = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "META", "NVDA"], index = 0)
 ############################################
@@ -180,8 +180,10 @@ if button:
             return response.choices[0].message["content"]
         except:
         #except openai.error.RateLimitError:
-            return "Sorry, the model is currently overloaded. Please try again later."
-        
+            st.markdown("##")
+            st.markdown("모델에 과부하가 걸렸습니다. 3분 후에 다시 시도해주시기 바랍니다.")
+            return None
+  
     print(latest)
     print(latest.Headline)
     headline = latest.Headline.iloc[0]
