@@ -178,7 +178,8 @@ if button:
             )
         #    print(str(response.choices[0].message))
             return response.choices[0].message["content"]
-        except openai.error.RateLimitError:
+        except:
+        #except openai.error.RateLimitError:
             return "Sorry, the model is currently overloaded. Please try again later."
         
     print(latest)
