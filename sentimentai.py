@@ -181,7 +181,7 @@ if button:
         except:
         #except openai.error.RateLimitError:
             st.markdown("##")
-            st.markdown("모델에 과부하가 걸렸습니다. 3분 후에 다시 시도해주시기 바랍니다.")
+            st.markdown("서버에 일시적으로 과부하가 걸렸습니다. 3분 후에 다시 시도해주시기 바랍니다.")
             return None
   
     print(latest)
