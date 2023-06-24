@@ -169,6 +169,7 @@ if button:
     timestamp = dt.datetime(start_time.year,start_time.month,start_time.day,20,0,0)
     latest = df[df.Date>timestamp].set_index('Date').sort_index(ascending=True)
     ###
+    import sys
     def get_completion_from_messages(messages, model="gpt-3.5-turbo-0613", temperature=0):
         try: 
             response = openai.ChatCompletion.create(
@@ -182,6 +183,7 @@ if button:
         #except openai.error.RateLimitError:
             st.markdown("##")
             st.markdown("서버에 일시적으로 과부하가 걸렸습니다. 3분 후에 다시 시도해주시기 바랍니다.")
+            sys.exit(0)
             return None
   
     print(latest)
